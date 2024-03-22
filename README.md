@@ -10,6 +10,7 @@ Hibernate is a powerful Java framework that simplifies the task of interacting w
 
 4. **Session**: A Session is a lightweight, short-lived object representing a single unit of work with the database. It provides methods to create, read, update, and delete (CRUD) database operations. Sessions are obtained from the SessionFactory and should be closed when no longer needed.
 <br>
+
 5. **Transaction**: A Transaction represents a single atomic unit of work with the database. All database operations within a transaction are treated as a single unit of work, and they are either all committed or all rolled back if an error occurs.
 <br>
 
