@@ -1,18 +1,28 @@
 package com.ebaad.HibernateDemo;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 /* Above we are writing @Entity as we are trying to save the object of Cars. So we need to specify that the Cars class is allowed
  * to store its object inside the database by using this annotation. */
+
+@Table(name="CarsTable") // change the table name
 public class Cars {
 	@Id // Here @Id specifies a primary key as every table in hibernate should have a primary key
 	private int year;
+	
+	@Column(name="KmsDriven") //change the column name
 	private int kmsDriven;
+	
+	@Transient // remove or drop the particular column
 	private String brand;
 	private String model;
 	
+	// Setters and Getters
 	public int getYear() {
 		return year;
 	}
@@ -37,7 +47,4 @@ public class Cars {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	
-
 }
-
