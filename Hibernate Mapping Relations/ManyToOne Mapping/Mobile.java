@@ -14,7 +14,10 @@ public class Mobile {
 	@Id // As mid is the primary key in Mobile Table so in Person Table we will have mid as the foreign key
 	private int mid;
 	private String mname;
-	
+
+	// What's New 
+	// Now there should be a link between Person and Mobile coz multiple persons will have one mobile
+	// Now Lets create a ManyToOne Relationship(Multiple persons one mobile) and generate its setters and getters
 	@ManyToOne
 	private Person person;
   
